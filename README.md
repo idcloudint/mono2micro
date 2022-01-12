@@ -21,7 +21,15 @@
   docker pull ibmcom/mono2micro-ui
   docker pull ibmcom/mono2micro-cardinal
   ```
+  ## Tutorial Steps
   
+  1. Create directory /m2m
+  2. Unzip Mono2Micro-example.zip to /m2m directory
+  3. Run the Mono2Micro Bluejay tool to analyze the Java source code, instrument it, and produce the analysis in two JSON files. 
+  ```
+  docker run -e LICENSE=accept --rm -it -v /m2m/daytrader:/var/application ibmcom/mono2micro-bluejay /var/application/monolith
+  ```
+  4. adf
 
   
   
