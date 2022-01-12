@@ -24,12 +24,17 @@
   ## Tutorial Steps
   
   1. Create directory /m2m
-  2. Unzip Mono2Micro-example.zip to /m2m directory
+  2. Unzip Mono2Micro-example.zip and Mono2Micro-Monolith-DataCollector.zip to /m2m directory
   3. Run the Mono2Micro Bluejay tool to analyze the Java source code, instrument it, and produce the analysis in two JSON files. 
   ```
   docker run -e LICENSE=accept --rm -it -v /m2m/daytrader:/var/application ibmcom/mono2micro-bluejay /var/application/monolith
   ```
-  4. adf
+  4. Run the flicker tool  
+  Flicker is a simple Java-based tool that prompts the user for the use label and then records the start time, and prompts again for the “stop” command after the user finishes running that scenario on the monolithic application.
+  ```
+  java -cp commons-net-3.6.jar;json-simple-1.1.jar;. Flicker -no_ntp
+  ```
+  5. adf
 
   
   
